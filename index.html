@@ -2,9 +2,368 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Portal Informática Forense</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infraestructura Digital y Análisis Forense</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Portal Informática Forense</h1>
+  <header class="hero" id="inicio">
+    <nav class="navbar">
+      <div class="logo">CyberLab</div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#arquitectura">Arquitectura</a>
+        <a href="#redes">Redes</a>
+        <a href="#forense">Ciberdelitos</a>
+        <a href="#referencias">Referencias</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <span class="badge">Portal técnico interactivo</span>
+      <h1>Infraestructura Digital y Análisis Forense</h1>
+      <p>
+        Arquitectura de computadores, redes de comunicación y fundamentos
+        aplicados a la investigación de ciberdelitos.
+      </p>
+      <a class="btn" href="#arquitectura">Comenzar recorrido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="arquitectura">
+      <div class="section-heading">
+        <span class="number">01</span>
+        <div>
+          <p class="eyebrow">Módulo 1</p>
+          <h2>Arquitectura y Estructura de Computadores</h2>
+        </div>
+      </div>
+
+      <p class="intro">
+        La arquitectura de un computador explica cómo trabajan sus componentes
+        internos para procesar instrucciones, almacenar datos y ejecutar programas.
+      </p>
+
+      <h3>Componentes principales de la CPU</h3>
+      <div class="cards three">
+        <article class="card">
+          <div class="icon">∑</div>
+          <h4>ALU</h4>
+          <p>
+            La Unidad Aritmética Lógica realiza operaciones matemáticas,
+            comparaciones y operaciones lógicas necesarias para procesar datos.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">⚙</div>
+          <h4>Unidad de Control</h4>
+          <p>
+            Coordina el funcionamiento del procesador, interpreta instrucciones
+            y controla el orden en que se ejecutan las operaciones.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">R</div>
+          <h4>Registros</h4>
+          <p>
+            Son pequeñas áreas de almacenamiento de gran velocidad ubicadas
+            dentro de la CPU. Guardan datos e instrucciones de uso inmediato.
+          </p>
+        </article>
+      </div>
+
+      <div class="interactive-box">
+        <div>
+          <p class="eyebrow">Ciclo de instrucción</p>
+          <h3>Fetch – Decode – Execute</h3>
+          <p>Presiona cada etapa para mostrar su función.</p>
+        </div>
+
+        <div class="cycle">
+          <button class="cycle-step active" data-title="FETCH" data-text="La CPU busca la siguiente instrucción en la memoria y la lleva al procesador.">
+            <span>1</span> FETCH
+          </button>
+          <button class="cycle-step" data-title="DECODE" data-text="La Unidad de Control interpreta la instrucción y determina qué operación debe realizarse.">
+            <span>2</span> DECODE
+          </button>
+          <button class="cycle-step" data-title="EXECUTE" data-text="El procesador ejecuta la operación indicada, utilizando la ALU, registros u otros componentes.">
+            <span>3</span> EXECUTE
+          </button>
+        </div>
+
+        <div class="cycle-description">
+          <h4 id="cycleTitle">FETCH</h4>
+          <p id="cycleText">
+            La CPU busca la siguiente instrucción en la memoria y la lleva al procesador.
+          </p>
+        </div>
+      </div>
+
+      <h3>Jerarquía de memoria</h3>
+      <div class="memory-layout">
+        <div class="memory-pyramid">
+          <div class="level level-1"><strong>Registros</strong><span>Muy rápidos / poca capacidad</span></div>
+          <div class="level level-2"><strong>Caché</strong><span>Acceso rápido y datos frecuentes</span></div>
+          <div class="level level-3"><strong>Memoria RAM</strong><span>Programas y datos en uso</span></div>
+          <div class="level level-4"><strong>SSD / HDD</strong><span>Mayor capacidad / almacenamiento permanente</span></div>
+        </div>
+
+        <div class="memory-notes">
+          <article>
+            <h4>Registros</h4>
+            <p>Se encuentran dentro del procesador y trabajan a gran velocidad.</p>
+          </article>
+          <article>
+            <h4>Caché</h4>
+            <p>Reduce el tiempo de acceso a información utilizada con frecuencia.</p>
+          </article>
+          <article>
+            <h4>RAM</h4>
+            <p>Almacena temporalmente datos y programas mientras el equipo está encendido.</p>
+          </article>
+          <article>
+            <h4>Almacenamiento secundario</h4>
+            <p>Conserva archivos y programas aunque el equipo se apague.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="redes">
+      <div class="section-heading">
+        <span class="number">02</span>
+        <div>
+          <p class="eyebrow">Módulo 2</p>
+          <h2>Fundamentos de Redes de Comunicaciones</h2>
+        </div>
+      </div>
+
+      <p class="intro">
+        Una red de comunicaciones conecta dispositivos para intercambiar
+        información, compartir recursos y acceder a servicios de manera eficiente.
+      </p>
+
+      <div class="cards four">
+        <article class="card compact">
+          <div class="icon">⇄</div>
+          <h4>Router</h4>
+          <p>Permite comunicar diferentes redes y dirigir el tráfico de datos.</p>
+        </article>
+        <article class="card compact">
+          <div class="icon">▦</div>
+          <h4>Switch</h4>
+          <p>Conecta varios dispositivos dentro de una misma red local.</p>
+        </article>
+        <article class="card compact">
+          <div class="icon">▣</div>
+          <h4>Servidor</h4>
+          <p>Ofrece recursos, archivos o servicios a otros equipos de la red.</p>
+        </article>
+        <article class="card compact">
+          <div class="icon">◉</div>
+          <h4>Dispositivos</h4>
+          <p>Computadores, teléfonos, impresoras, cámaras y otros equipos conectados.</p>
+        </article>
+      </div>
+
+      <div class="importance">
+        <h3>¿Por qué son importantes las redes?</h3>
+        <p>
+          Las redes permiten compartir información, conectarse a internet,
+          trabajar de forma colaborativa, usar servicios institucionales y
+          mantener comunicación entre diferentes dispositivos y usuarios.
+        </p>
+      </div>
+
+      <h3>Dirección IP vs. Dirección MAC</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Característica</th>
+              <th>Dirección IP</th>
+              <th>Dirección MAC</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tipo</td>
+              <td>Lógica</td>
+              <td>Física</td>
+            </tr>
+            <tr>
+              <td>Función</td>
+              <td>Identificar y ubicar un equipo dentro de una red.</td>
+              <td>Identificar una interfaz de red.</td>
+            </tr>
+            <tr>
+              <td>Puede cambiar</td>
+              <td>Sí</td>
+              <td>Generalmente permanece asociada al adaptador.</td>
+            </tr>
+            <tr>
+              <td>Ejemplo</td>
+              <td><code>192.168.1.20</code></td>
+              <td><code>00:1A:2B:3C:4D:5E</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Topologías físicas de red</h3>
+      <div class="cards three topologies">
+        <article class="card">
+          <h4>Topología Estrella</h4>
+          <div class="topology star">
+            <span class="node n1">PC</span>
+            <span class="node n2">PC</span>
+            <span class="node center">SW</span>
+            <span class="node n3">PC</span>
+            <span class="node n4">PC</span>
+          </div>
+          <p>
+            Todos los equipos se conectan a un dispositivo central. Si un equipo
+            falla, los demás pueden seguir funcionando; pero si falla el centro,
+            la red puede quedar afectada.
+          </p>
+        </article>
+
+        <article class="card">
+          <h4>Topología Anillo</h4>
+          <div class="topology ring">
+            <span class="node r1">PC</span>
+            <span class="node r2">PC</span>
+            <span class="node r3">PC</span>
+            <span class="node r4">PC</span>
+          </div>
+          <p>
+            Los dispositivos forman un circuito cerrado. Una interrupción puede
+            afectar la comunicación si no existen mecanismos de redundancia.
+          </p>
+        </article>
+
+        <article class="card">
+          <h4>Topología Bus</h4>
+          <div class="topology bus">
+            <div class="bus-line"></div>
+            <span class="node b1">PC</span>
+            <span class="node b2">PC</span>
+            <span class="node b3">PC</span>
+            <span class="node b4">PC</span>
+          </div>
+          <p>
+            Los dispositivos comparten un canal principal. Es sencilla, pero una
+            falla en el medio principal puede afectar a varios equipos.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="forense">
+      <div class="section-heading">
+        <span class="number">03</span>
+        <div>
+          <p class="eyebrow">Módulo 3</p>
+          <h2>Aplicación en la Investigación de Ciberdelitos</h2>
+        </div>
+      </div>
+
+      <p class="intro">
+        Para un investigador digital, conocer el funcionamiento interno de un
+        computador y de una red ayuda a identificar dónde puede encontrarse
+        información relevante y cómo debe interpretarse.
+      </p>
+
+      <div class="forensic-grid">
+        <article class="forensic-card">
+          <span class="forensic-number">01</span>
+          <h3>Memoria RAM</h3>
+          <p>
+            La RAM puede contener información temporal sobre programas abiertos,
+            procesos en ejecución, conexiones activas y datos que podrían
+            desaparecer cuando el computador se apaga.
+          </p>
+        </article>
+
+        <article class="forensic-card">
+          <span class="forensic-number">02</span>
+          <h3>Registros</h3>
+          <p>
+            Los registros de la CPU ayudan a comprender el estado inmediato del
+            procesador durante una ejecución. En informática también existen
+            registros o logs del sistema, que documentan actividades y eventos.
+          </p>
+        </article>
+
+        <article class="forensic-card">
+          <span class="forensic-number">03</span>
+          <h3>Tráfico de red</h3>
+          <p>
+            El análisis del tráfico permite observar comunicaciones entre
+            dispositivos, direcciones de origen y destino, protocolos utilizados
+            y comportamientos que pueden resultar relevantes para una investigación.
+          </p>
+        </article>
+      </div>
+
+      <div class="analysis-box">
+        <p class="eyebrow">Análisis breve</p>
+        <h3>¿Por qué este conocimiento es fundamental?</h3>
+        <p>
+          Porque una investigación de ciberdelitos no se limita a revisar archivos.
+          También es necesario comprender qué ocurre en la memoria, cómo trabaja el
+          procesador y cómo se comunican los dispositivos. Estos conocimientos ayudan
+          a ubicar posibles fuentes de evidencia, relacionar eventos y reconstruir,
+          de manera técnica, parte de la actividad realizada en un sistema.
+        </p>
+      </div>
+
+      <div class="evidence-flow">
+        <div>Equipo</div><span>→</span>
+        <div>Memoria</div><span>→</span>
+        <div>Red</div><span>→</span>
+        <div>Captura</div><span>→</span>
+        <div>Análisis</div><span>→</span>
+        <div>Evidencia digital</div>
+      </div>
+    </section>
+
+    <section class="section alt" id="referencias">
+      <div class="section-heading">
+        <span class="number">04</span>
+        <div>
+          <p class="eyebrow">Fuentes de consulta</p>
+          <h2>Referencias</h2>
+        </div>
+      </div>
+
+      <div class="references">
+        <p>
+          Stallings, W. (2016). <em>Computer Organization and Architecture:
+          Designing for Performance</em>. Pearson.
+        </p>
+        <p>
+          Tanenbaum, A. S., & Wetherall, D. J. (2012).
+          <em>Redes de computadoras</em>. Pearson.
+        </p>
+        <p>
+          Casey, E. (2011). <em>Digital Evidence and Computer Crime</em>.
+          Academic Press.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Portal académico de Infraestructura Digital y Análisis Forense</p>
+    <p>Desarrollado con HTML5, CSS3 y JavaScript</p>
+    <button id="backToTop">↑ Volver arriba</button>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
